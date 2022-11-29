@@ -35,7 +35,7 @@ for link in url_collection:
 #print(urls) # вывод массива на экран
 k = url.rfind('?')
 #out_file = (url[18:k] + '.txt').replace('/','-')
-out_file
+out_file = 'links_for_scan.txt'
 print(out_file)
 
 with open(out_file, "w") as file: # Создаём файл для хранения ссылок
