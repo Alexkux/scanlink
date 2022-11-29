@@ -24,7 +24,7 @@ urls = [] # urls - массив ссылок
 for link in url_collection:
     url = link
 
-    for i in range(1000):
+    for i in range(2000):
         url_new = url+str(i+1) # Присоединяем номер страницы к url
         if requests.get(url_new).status_code == 200: # Проверка стр на доступность
             print(url_new)  # не обязательный шаг
