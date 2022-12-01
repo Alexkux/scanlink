@@ -5,11 +5,13 @@
 """
 import csv
 import requests
+import time
 import re
 from bs4 import BeautifulSoup
 
-# Задаём шаблон url:
+end_time = time.time() -
 
+# Задаём шаблон url:
 url_collection = set()
 
 urls_file='links.txt'
@@ -41,4 +43,8 @@ print(out_file)
 with open(out_file, "w") as file: # Создаём файл для хранения ссылок
     for i in range(len(urls)): # Число шагов = количеству элементов массива
         print(urls[i], file=file, sep="\n") # запись элементов массива в файл по-строчно
+
+
+end_time = time.time() - start_time
+print(f"\nВыполнено за {end_time} секунд")
 print('Done')
