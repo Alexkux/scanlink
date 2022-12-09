@@ -9,7 +9,7 @@ import time
 import re
 from bs4 import BeautifulSoup
 
-end_time = time.time() -
+start_time = time.time()
 
 # Задаём шаблон url:
 url_collection = set()
@@ -46,5 +46,6 @@ with open(out_file, "w") as file: # Создаём файл для хранен�
 
 
 end_time = time.time() - start_time
-print(f"\nВыполнено за {end_time} секунд")
+number_of_links=len(urls)
+print(f"\nВыполнено за {round(end_time,2)} секунд, собрано {number_of_links} ссылок")
 print('Done')
